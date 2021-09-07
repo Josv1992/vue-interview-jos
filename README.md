@@ -73,3 +73,32 @@ Deliveries:
 
 **Could**
 - Move the `To Do List` data to a [Vuex store](https://vuex.vuejs.org/guide/).
+
+
+## Technical SEO Front End Developer
+Screen resolutions what will be tested are:
+- **Mobile:** 320x500, 360x640, 412x700
+- **Tablet:** 1024x768, 768x1024
+- **Desktop:** 1920x1080
+
+Deliveries:
+- **Vue project** (Internship requirements)
+
+**Must**
+- Complete everything of the Internship requirements above (using [Bootstrap v4.1](https://getbootstrap.com/)).
+- Have a contact page with placeholder text (content is not important)
+- Have a privacy/legal page with placholder text (content is not important)
+- Have an about page with placeholder text and a link to a personal page (content is not important)
+- Have a personal page as subpage of the about page with your name
+- Add an image to the contact page
+
+**Should**
+- Have an XML sitemap
+- Make sure that the personal page is excluded from google
+- Make sure the image on the contact page does not trigger possible CLS issues
+
+**Could**
+- Add a possible implementation of structured data, can have placeholder texts or non-existing data.
+
+**Extra mile**
+- Make a proposition about how to automatically test the google page speed of the project.
