@@ -3,8 +3,13 @@
     <Menu></Menu>
     
     <div class="item-creator">
-      <input type="text">
-      <button>
+      <input 
+        type="text"
+        id="taskItem"
+        v-model.trim="taskItem.val"
+        v-on:keypress.enter="addItem()"
+        >
+      <button v-on:click="addItem()" v-bind:disabled="taskItem.val === ''">
         Add
       </button>
     </div>
@@ -34,7 +39,18 @@ export default {
         'Wash car', 
         'Do groceries', 
         'Finish this assignment'
-      ]
+      ],
+      taskItem: {
+        val: ""
+      }
+    }
+  },
+
+  // TODO: use Store
+
+  methods: {
+    addItem() {
+      this.items.push(this.taskItem.val);
     }
   }
 }
@@ -49,8 +65,8 @@ html, body {
 * {
   box-sizing: border-box;
 }
-#app {
 
+#app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
