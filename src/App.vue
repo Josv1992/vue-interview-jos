@@ -56,10 +56,17 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin-top: 3rem;
 }
 
 #app .item-creator {
   height: 4rem;
   line-height: 4rem;
+}
+
+.item-creator input:hover {
+          box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733);
+        -webkit-box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733);
+        -moz-box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733);
 }
 </style>
