@@ -9,8 +9,4 @@ export default {
     console.log(item),
     commit('addItem', item.val)
   },
-
-  // removeItem: ({ commit }, item) => {
-  //   commit('removeItem', item)
-  // },
 }
