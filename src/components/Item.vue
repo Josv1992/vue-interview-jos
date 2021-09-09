@@ -1,7 +1,7 @@
 <template>
   <div class="item">
     <slot></slot>
-    <button class="remove" v-on:click="remove2()">
+    <button class="remove" v-on:click="removeItem(itemInfo)">
         Remove
     </button>
   </div>
@@ -12,18 +12,15 @@ import { mapActions, mapGetters } from "vuex";
 export default {
 
 props: {
-    exampleDefaultObject: {
+    itemInfo: {
         type: Object,
         default() {
-            return {}
+            return {
+                val: String,
+                key: Number
+            }
         }
     },
-    exampleDefaultArray: {
-        type: Array,
-        default() {
-            return []
-        }
-    }
 },
 
   data: function() {
@@ -40,7 +37,7 @@ props: {
 
   methods: {
     remove2() {
-        console.log(this.props.val);
+        console.log(this.itemInfo);
 
     },
     remove() {

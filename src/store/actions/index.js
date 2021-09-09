@@ -14,7 +14,6 @@ export default {
   },
 
   removeItem: ({ commit }, item) => {
-    console.log(item);
     commit('removeItem', item)
   },
 }

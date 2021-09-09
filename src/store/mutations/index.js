@@ -1,5 +1,3 @@
-import Vue from 'vue'
-
 export default {
   resetOld(state, newState) {
     state.taskItems = newState.taskItems;
@@ -7,13 +5,18 @@ export default {
 
   addItem(state, item) {
     if (item.val !== "") {
-      state.taskItems.push({val: item.val, "key": item.key});
+      const key = new Date().getTime();
+      state.taskItems.push({val: item.val, "key": key});
       localStorage.setItem('taskItems', JSON.stringify(state.taskItems));
     }
   },
 
   removeItem(state, item) {
-    console.log('removing ', item.val)
-    Vue.delete(state.taskItems, item.key);
-  }
+    for (let i in state.taskItems) {
+      if (state.taskItems[i].key === item.key) {
+        state.taskItems.splice(i, 1);
+      }
+    }
+    localStorage.setItem('taskItems', JSON.stringify(state.taskItems));
+  },
 }

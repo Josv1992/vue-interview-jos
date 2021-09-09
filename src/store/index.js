@@ -7,6 +7,9 @@ import getters from './getters'
 import actions from './actions'
 import mutations from './mutations'
 
+if (localStorage.getItem('taskItems') === null) {
+  localStorage.setItem('taskItems', "[]");
+}
 
 const store = new Vuex.Store({
   state: {
@@ -16,4 +19,5 @@ const store = new Vuex.Store({
   mutations,
   getters
 })
+
 export default store;

@@ -23,7 +23,7 @@ export default {
     return {
       taskItem: {
         val: "",
-        key: new Date().getTime(),
+        key: 0,
       }
     }
   },

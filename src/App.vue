@@ -3,7 +3,7 @@
     <Menu></Menu>
     <ItemCreator></ItemCreator>
     <div class="item-list">
-      <Item v-for="item in taskItems" :key="item.key" :propObj="anObject">{{item.val}}</Item>
+      <Item v-for="item in taskItems" :key="item.key" :itemInfo="item">{{item.val}}</Item>
     </div>
 
     <Footer></Footer>
