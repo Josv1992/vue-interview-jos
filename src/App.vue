@@ -2,8 +2,9 @@
   <div id="app">
     <Menu></Menu>
     <ItemCreator></ItemCreator>
-
-    <Item v-for="(item, i) in taskItems" :key="i">{{item}}</Item>
+    <div class="item-list">
+      <Item v-for="(item, i) in taskItems" :key="i">{{item}}</Item>
+    </div>
 
     <Footer></Footer>
   </div>
@@ -46,19 +47,23 @@ export default {
 
 <style lang="sass">
 html, body 
-	margin: 0 
-	padding: 0 
+  margin: 0 
+  padding: 0 
 * 
-	box-sizing: border-box 
+  box-sizing: border-box 
 #app 
-	font-family: 'Avenir', Helvetica, Arial, sans-serif 
-	-webkit-font-smoothing: antialiased 
-	-moz-osx-font-smoothing: grayscale 
-	text-align: center 
-	color: #2c3e50 
-	margin-top: 3rem 
-	height: 4rem 
-	line-height: 4rem 
+  font-family: 'Avenir', Helvetica, Arial, sans-serif 
+  -webkit-font-smoothing: antialiased 
+  -moz-osx-font-smoothing: grayscale 
+  text-align: center 
+  color: #2c3e50 
+  margin-top: 3rem 
+  height: 4rem 
+  line-height: 4rem 
+
+.item
+	&:nth-child(even) 
+		background-color: #e0e0e0 
 
 
 </style>

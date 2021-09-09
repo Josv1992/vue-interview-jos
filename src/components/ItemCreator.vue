@@ -6,7 +6,7 @@
       v-model.trim="taskItem.val"
       v-on:keypress.enter="addItem(taskItem)"
       >
-    <button v-on:click="addItem(taskItem)" v-bind:disabled="taskItem.val === ''">
+    <button class="add-button" v-on:click="addItem(taskItem)" v-bind:disabled="taskItem.val === ''">
       Add
     </button>
   </div>
@@ -38,10 +38,10 @@ export default {
   line-height: 4rem
 
 .item-creator 
-	input 
-		&:hover 
-			box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733) 
-			-webkit-box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733) 
-			-moz-box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733) 
+  input 
+  &:hover 
+    box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733) 
+      -webkit-box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733) 
+      -moz-box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733) 
 
 </style>

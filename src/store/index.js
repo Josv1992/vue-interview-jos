@@ -12,7 +12,8 @@ const store = new Vuex.Store({
     taskItems: [
       'Wash car', 
       'Do groceries', 
-      'Finish this assignment'
+      'Finish this assignment',
+      'Eat Soup'
     ]
   },
   actions,
