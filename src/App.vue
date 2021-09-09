@@ -7,14 +7,14 @@
         type="text"
         id="taskItem"
         v-model.trim="taskItem.val"
-        v-on:keypress.enter="addItem()"
+        v-on:keypress.enter="addItem(taskItem)"
         >
-      <button v-on:click="addItem()" v-bind:disabled="taskItem.val === ''">
+      <button v-on:click="addItem(taskItem)" v-bind:disabled="taskItem.val === ''">
         Add
       </button>
     </div>
 
-    <Item v-for="item in items" :key="item">{{item}}</Item>
+    <Item v-for="(item, i) in taskItems" :key="i">{{item}}</Item>
 
     <Footer></Footer>
   </div>
@@ -24,6 +24,8 @@
 import Menu from './components/Menu';
 import Item from './components/Item';
 import Footer from './components/Footer';
+
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: 'app',
@@ -35,23 +37,18 @@ export default {
 
   data() {
     return {
-      items: [
-        'Wash car', 
-        'Do groceries', 
-        'Finish this assignment'
-      ],
       taskItem: {
         val: ""
       }
     }
   },
 
-  // TODO: use Store
+  computed: {
+    ...mapGetters(["taskItems"]),
+  },
 
   methods: {
-    addItem() {
-      this.items.push(this.taskItem.val);
-    }
+    ...mapActions(["addItem"]),
   }
 }
 </script>

@@ -1,11 +1,23 @@
 <template>
   <div class="item">
     <slot></slot>
-    <button class="remove">
+    <button class="remove" v-on:click="remove()">
         Remove
     </button>
   </div>
 </template>
+<script>
+
+export default {
+  methods: {
+    remove() {
+        this.$destroy();
+        this.$el.parentNode.removeChild(this.$el);
+    }
+  }
+}
+</script>
+
 <style>
 .item {
   height: 3rem;
