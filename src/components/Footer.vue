@@ -4,10 +4,10 @@
     </div>
 </template>
 
-<style>
-.footer {
-    height: 10rem;
-    line-height: 2rem;
-    padding: 1rem;
-}
+<style lang="sass">
+.footer
+  background: #eee
+  position: absolute
+  width: 100%
+  bottom: 0
 </style>

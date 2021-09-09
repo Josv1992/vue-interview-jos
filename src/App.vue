@@ -1,11 +1,12 @@
 <template>
   <div id="app">
+    <div class="content-wrap">
     <Menu></Menu>
     <ItemCreator></ItemCreator>
-    <div class="item-list">
-      <Item v-for="item in taskItems" :key="item.key" :itemInfo="item">{{item.val}}</Item>
+      <div class="item-list">
+        <Item v-for="item in taskItems" :key="item.key" :itemInfo="item">{{item.val}}</Item>
+      </div>
     </div>
-
     <Footer></Footer>
   </div>
 </template>
@@ -63,13 +64,18 @@ html, body
   -moz-osx-font-smoothing: grayscale 
   text-align: center 
   color: #2c3e50 
-  margin-top: 3rem 
-  height: 4rem 
-  line-height: 4rem 
+  line-height: 4rem
+  position: relative
+  min-height: 100vh
+
+.item-list
+  margin-top: 3rem
 
 .item
 	&:nth-child(even) 
 		background-color: #e0e0e0 
 
+.content-wrap
+  padding-bottom: 4rem
 
 </style>
