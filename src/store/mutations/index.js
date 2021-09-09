@@ -1,13 +1,19 @@
+import Vue from 'vue'
+
 export default {
-  reset(state, newState) {
+  resetOld(state, newState) {
     state.taskItems = newState.taskItems;
   },
 
   addItem(state, item) {
-    state.taskItems.push(item);
+    if (item.val !== "") {
+      state.taskItems.push({val: item.val, "key": item.key});
+      localStorage.setItem('taskItems', JSON.stringify(state.taskItems));
+    }
   },
 
   removeItem(state, item) {
-    state.taskItems.splice(item);
+    console.log('removing ', item.val)
+    Vue.delete(state.taskItems, item.key);
   }
 }

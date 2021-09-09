@@ -7,18 +7,13 @@ import getters from './getters'
 import actions from './actions'
 import mutations from './mutations'
 
+
 const store = new Vuex.Store({
   state: {
-    taskItems: [
-      'Wash car', 
-      'Do groceries', 
-      'Finish this assignment',
-      'Eat Soup'
-    ]
+    taskItems: JSON.parse(localStorage.getItem('taskItems'))
   },
   actions,
   mutations,
   getters
 })
-
 export default store;

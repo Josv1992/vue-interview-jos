@@ -3,6 +3,7 @@
     <input 
       type="text"
       id="taskItem"
+      class="task-input-field"
       v-model.trim="taskItem.val"
       v-on:keypress.enter="addItem(taskItem)"
       >
@@ -21,7 +22,8 @@ export default {
   data() {
     return {
       taskItem: {
-        val: ""
+        val: "",
+        key: new Date().getTime(),
       }
     }
   },
@@ -32,6 +34,7 @@ export default {
 </script>
 
 <style lang="sass">
+
 .item-creator
   padding-top: 1rem
   height: 4rem
@@ -43,5 +46,11 @@ export default {
     box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733) 
       -webkit-box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733) 
       -moz-box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733) 
+
+.task-input-field
+
+.add-button
+  height: 25px
+  line-height: 1rem
 
 </style>

@@ -3,7 +3,7 @@
     <Menu></Menu>
     <ItemCreator></ItemCreator>
     <div class="item-list">
-      <Item v-for="(item, i) in taskItems" :key="i">{{item}}</Item>
+      <Item v-for="item in taskItems" :key="item.key" :propObj="anObject">{{item.val}}</Item>
     </div>
 
     <Footer></Footer>
@@ -16,10 +16,13 @@ import Item from './components/Item';
 import Footer from './components/Footer';
 import ItemCreator from './components/ItemCreator';
 
-import { mapActions, mapGetters } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   name: 'app',
+  props: {
+    anObject: Object
+  },
   components: {
     Menu,
     Item,
@@ -30,7 +33,8 @@ export default {
   data() {
     return {
       taskItem: {
-        val: ""
+        val: "",
+        key: 0
       }
     }
   },
@@ -39,9 +43,11 @@ export default {
     ...mapGetters(["taskItems"]),
   },
 
-  methods: {
-    ...mapActions(["addItem"]),
-  }
+
+  test() {
+  console.log(localStorage.getItem('taskItems'));
+}
+
 }
 </script>
 
