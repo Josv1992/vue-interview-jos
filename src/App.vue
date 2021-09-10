@@ -1,21 +1,17 @@
 <template>
   <div id="app" class="container">
+      <Menu></Menu>
     <div class="content-wrap">
-    <Menu></Menu>
-    <ItemCreator></ItemCreator>
-      <div class="item-list list-group">
-        <Item v-for="item in taskItems" :key="item.key" :itemInfo="item">{{item.val}}</Item>
-      </div>
+      <router-view></router-view>
     </div>
-    <Footer></Footer>
+
+      <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Menu from './components/Menu';
-import Item from './components/Item';
 import Footer from './components/Footer';
-import ItemCreator from './components/ItemCreator';
 
 import { mapGetters } from "vuex";
 
@@ -23,9 +19,7 @@ export default {
   name: 'app',
   components: {
     Menu,
-    Item,
     Footer,
-    ItemCreator
   },
 
   data() {

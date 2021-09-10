@@ -2,6 +2,8 @@
     <nav class="menu navbar">
         <router-link to="/">To Do List</router-link>
         <router-link to="/contact">Contact</router-link>
+        <router-link to="/legal">Legal</router-link>
+        <router-link to="/about">About</router-link>
     </nav>
 </template>
 <style lang="sass">

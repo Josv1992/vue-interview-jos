@@ -1,6 +1,10 @@
 <template>
-  <div class="contact container">
+  <div class="contact">
     <h1>Hoi</h1>
+    <h1>Hoi</h1>
+    <h1>Hoi</h1>
+
+    <!-- TODO: img -->
   </div>
 </template>
 
