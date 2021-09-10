@@ -1,7 +1,9 @@
 <template>
-    <div class="footer">
-        Footer &copy;
-    </div>
+    <footer class="footer">
+      <div class="container">
+        <span>Footer &copy; </span>
+      </div>
+    </footer>
 </template>
 
 <style lang="sass">

@@ -7,9 +7,14 @@
       v-model.trim="taskItem.val"
       v-on:keypress.enter="addItem(taskItem)"
       >
-    <button class="add-button" v-on:click="addItem(taskItem)" v-bind:disabled="taskItem.val === ''">
+    <b-button 
+      class="add-button" 
+      v-on:click="addItem(taskItem)" 
+      v-bind:disabled="taskItem.val === ''"
+      variant="primary"
+      >
       Add
-    </button>
+    </b-button>
   </div>
 </template>
 
@@ -34,23 +39,20 @@ export default {
 </script>
 
 <style lang="sass">
-
 .item-creator
   height: 4rem
   line-height: 4rem
 
-.item-creator 
-  input 
+.task-input-field
   &:hover 
     box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733) 
-      -webkit-box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733) 
-      -moz-box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733) 
+    -webkit-box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733) 
+    -moz-box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733) 
 
 .task-input-field
   max-height: 2rem
 
 .add-button
-  height: 25px
-  line-height: 1rem
+  margin-left: 20px
 
 </style>

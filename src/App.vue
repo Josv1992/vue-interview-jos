@@ -1,9 +1,9 @@
 <template>
-  <div id="app" class="container">
+  <div id="app" >
       <Menu></Menu>
-    <div class="content-wrap">
+    <main class="content-wrap">
       <router-view></router-view>
-    </div>
+    </main>
 
       <Footer></Footer>
   </div>
@@ -44,21 +44,15 @@ html, body
   padding: 0 
 * 
   box-sizing: border-box 
+  
 #app 
   font-family: 'Avenir', Helvetica, Arial, sans-serif 
   -webkit-font-smoothing: antialiased 
   -moz-osx-font-smoothing: grayscale 
   text-align: center 
   color: #2c3e50 
-  line-height: 4rem
   position: relative
   min-height: 100vh
 
-.container
-  padding: 0
-
-.content-wrap
-  padding-top: 4rem
-  padding-bottom: 4rem
 
 </style>

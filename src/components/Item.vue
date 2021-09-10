@@ -1,9 +1,15 @@
 <template>
-  <div class="item">
-    <slot></slot>
-    <button class="remove btn-primary btn-sm" v-on:click="removeItem(itemInfo)">
-        Remove
-    </button>
+  <div class="item row">
+    <div  class="col-9">
+      <slot></slot>
+    </div>
+      <b-button class="remove col-3 close" 
+        type="button" 
+        aria-label="Close" 
+        alt="Remove" 
+        v-on:click="removeItem(itemInfo)">
+          <span aria-hidden="true">&times;</span>
+      </b-button>
   </div>
 </template>
 <script>
@@ -49,8 +55,7 @@ export default {
   border-bottom: 1px solid #f0f0f0
 
 .remove 
-    background-color: crimson
-    height: 25px
-    line-height: 12px
+  color: crimson
+  font-weight: bolder
 
 </style>

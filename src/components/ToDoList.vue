@@ -1,9 +1,9 @@
 <template>
   <div>
     <ItemCreator></ItemCreator>
-      <div class="item-list list-group">
+      <b-list-group class="item-list list-group">
         <Item v-for="item in taskItems" :key="item.key" :itemInfo="item">{{item.val}}</Item>
-      </div>
+      </b-list-group>
   </div>
 </template>
 
@@ -20,25 +20,16 @@ export default {
     ItemCreator
   },
 
-  data() {
-    return {
-      taskItem: {
-        val: "",
-        key: 0
-      }
-    }
-  },
-
   computed: {
     ...mapGetters(["taskItems"]),
   },
-
 }
 </script>
 
 <style lang="sass">
 .item-list
-  margin-top: 1rem
+  border-top: 1px solid #ccc
+  border-bottom: 1px solid #ccc
 
 .item
 	&:nth-child(even) 
