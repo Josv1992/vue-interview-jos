@@ -1,9 +1,6 @@
 <template>
   <div class="contact">
-    <h1>Hoi</h1>
-    <h1>Hoi</h1>
-    <h1>Hoi</h1>
-
+    <h1>Contact</h1>
     <!-- TODO: img -->
   </div>
 </template>

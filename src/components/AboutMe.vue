@@ -1,8 +1,6 @@
 <template>
   <div class="about-me">
     <h1>About Me</h1>
-    <h1>About Me</h1>
-    <h1>About Me</h1>
   </div>
 </template>
 
@@ -13,6 +11,4 @@ export default {
 </script>
 
 <style lang="sass">
-.about-me
-  background-color: black
 </style>
