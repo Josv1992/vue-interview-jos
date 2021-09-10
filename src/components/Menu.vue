@@ -1,7 +1,8 @@
 <template>
-    <div class="menu">
-        To Do List
-    </div>
+    <nav class="menu navbar">
+        <router-link to="/">To Do List</router-link>
+        <router-link to="/contact">Contact</router-link>
+    </nav>
 </template>
 <style lang="sass">
 .menu 

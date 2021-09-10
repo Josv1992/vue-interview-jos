@@ -1,7 +1,7 @@
 <template>
   <div class="item">
     <slot></slot>
-    <button class="remove" v-on:click="removeItem(itemInfo)">
+    <button class="remove btn-primary btn-sm" v-on:click="removeItem(itemInfo)">
         Remove
     </button>
   </div>
@@ -11,40 +11,32 @@ import { mapActions, mapGetters } from "vuex";
 
 export default {
 
-props: {
-    itemInfo: {
-        type: Object,
-        default() {
-            return {
-                val: String,
-                key: Number
-            }
-        }
-    },
-},
+  props: {
+      itemInfo: {
+          type: Object,
+          default() {
+              return {
+                  val: String,
+                  key: Number
+              }
+          }
+      },
+  },
 
   data: function() {
-    return {
+  return {
       taskItem: {
-        val: "test",
-        key: 0,
+      val: "test",
+      key: 0,
       }
-    }
+  }
   },
   computed: {
-    ...mapGetters(["taskItems"]),
+  ...mapGetters(["taskItems"]),
   },
 
   methods: {
-    remove2() {
-        console.log(this.itemInfo);
-
-    },
-    remove() {
-        this.$destroy();
-        this.$el.parentNode.removeChild(this.$el);
-    },
-    ...mapActions(["removeItem"]),
+  ...mapActions(["removeItem"]),
   }
 }
 </script>

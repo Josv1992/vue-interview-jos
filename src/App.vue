@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
     <div class="content-wrap">
     <Menu></Menu>
     <ItemCreator></ItemCreator>
-      <div class="item-list">
+      <div class="item-list list-group">
         <Item v-for="item in taskItems" :key="item.key" :itemInfo="item">{{item.val}}</Item>
       </div>
     </div>
@@ -21,9 +21,6 @@ import { mapGetters } from "vuex";
 
 export default {
   name: 'app',
-  props: {
-    anObject: Object
-  },
   components: {
     Menu,
     Item,
@@ -44,11 +41,6 @@ export default {
     ...mapGetters(["taskItems"]),
   },
 
-
-  test() {
-  console.log(localStorage.getItem('taskItems'));
-}
-
 }
 </script>
 
@@ -68,8 +60,11 @@ html, body
   position: relative
   min-height: 100vh
 
+.container
+  padding: 0
+
 .item-list
-  margin-top: 3rem
+  margin-top: 5rem
 
 .item
 	&:nth-child(even) 
@@ -77,5 +72,12 @@ html, body
 
 .content-wrap
   padding-bottom: 4rem
+
+@media (min-width: 1024px)
+  .item-list
+    max-width: 700px
+    margin: 0 auto
+    margin-top: 5rem
+    border: 1px solid black
 
 </style>

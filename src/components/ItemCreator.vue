@@ -48,6 +48,7 @@ export default {
       -moz-box-shadow: 0px 4px 5px 2px rgba(13, 110, 255, 0.733) 
 
 .task-input-field
+  max-height: 2rem
 
 .add-button
   height: 25px
