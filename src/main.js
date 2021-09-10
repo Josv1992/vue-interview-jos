@@ -6,6 +6,7 @@ import ToDoList from './components/ToDoList';
 import Contact from './components/Contact';
 import Legal from './components/Legal';
 import About from './components/About';
+import AboutMe from './components/AboutMe';
 
 
 Vue.use(VueRouter)
@@ -14,7 +15,15 @@ const routes = [
   { path: '/', component: ToDoList },
   { path: '/contact', component: Contact },
   { path: '/legal', component: Legal },
-  { path: '/about', component: About },
+  { path: '/about', component: About, 
+    children: [
+      {
+        path: '/about/aboutme',
+        component: AboutMe
+      }
+    ] 
+  },
+  { path: '/aboutme', component: AboutMe }
 ]
 
 const router = new VueRouter({

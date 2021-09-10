@@ -38,7 +38,7 @@ export default {
 
 <style lang="sass">
 .item-list
-  margin-top: 5rem
+  margin-top: 1rem
 
 .item
 	&:nth-child(even) 

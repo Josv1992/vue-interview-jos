@@ -4,12 +4,14 @@
     <h1>About</h1>
     <h1>About</h1>
 
-    <!-- TODO: Router view? -->
-    <a href="#">About Me</a>
+    <router-link to="/aboutme">About Me 1</router-link>
   </div>
 </template>
 
 <script>
+export default {
+  name: 'About'
+}
 
 </script>
 

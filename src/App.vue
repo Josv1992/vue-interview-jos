@@ -57,21 +57,8 @@ html, body
 .container
   padding: 0
 
-.item-list
-  margin-top: 5rem
-
-.item
-	&:nth-child(even) 
-		background-color: #e0e0e0 
-
 .content-wrap
+  padding-top: 4rem
   padding-bottom: 4rem
-
-@media (min-width: 1024px)
-  .item-list
-    max-width: 700px
-    margin: 0 auto
-    margin-top: 5rem
-    border: 1px solid black
 
 </style>

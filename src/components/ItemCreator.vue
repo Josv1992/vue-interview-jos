@@ -36,7 +36,6 @@ export default {
 <style lang="sass">
 
 .item-creator
-  padding-top: 4rem
   height: 4rem
   line-height: 4rem
 
