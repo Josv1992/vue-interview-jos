@@ -1,14 +1,12 @@
-// require = require('esm')(module);
-// const { routes } = require('./src/routes.js');
+require = require('esm')(module);
+const { routes } = require('./src/routes.js');
 
 module.exports = {
   pluginOptions: {
     sitemap: {
-      urls: [
-        'https://example.com/',
-        'https://example.com/about',
-      ]
-    }
+      baseURL: 'https://example.com',
+      routes,
+  }
   },
   configureWebpack: {
     plugins: [],
