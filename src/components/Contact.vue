@@ -28,7 +28,6 @@ export default {
     ]
   },
 }
-
 </script>
 
 <style lang="sass">
@@ -36,6 +35,5 @@ export default {
   margin-bottom: 6rem
   max-width: 100%
   max-height: 100%
-
 
 </style>

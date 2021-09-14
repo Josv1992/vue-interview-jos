@@ -28,5 +28,4 @@ a
   &:hover
     color: red
 
-
 </style>
