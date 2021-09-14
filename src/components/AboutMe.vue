@@ -7,9 +7,17 @@
 
 <script>
 export default {
-  name: 'AboutMe'
+  name: 'About Me',
+  metaInfo: {
+  title: 'About Me',
+  meta: [
+    { vmid: 'description', name: 'description', content: 'About Me page' }
+  ]
+},
 }
+
 </script>
+
 
 <style lang="sass">
 </style>

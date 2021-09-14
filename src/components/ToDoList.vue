@@ -19,6 +19,12 @@ export default {
     Item,
     ItemCreator
   },
+  metaInfo: {
+  title: 'To Do List',
+  meta: [
+    { vmid: 'description', name: 'description', content: 'To "Do List' }
+  ]
+},
 
   computed: {
     ...mapGetters(["taskItems"]),

@@ -5,8 +5,18 @@
 </template>
 
 <script>
+export default {
+  name: 'Legal',
+  metaInfo: {
+  title: 'Legal',
+  meta: [
+    { vmid: 'description', name: 'description', content: 'Legal Info page' }
+  ]
+},
+}
 
 </script>
+
 
 <style lang="sass">
 

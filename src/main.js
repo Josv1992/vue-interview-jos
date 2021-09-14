@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import store from './store/index.js';
 import App from './App.vue'
+import VueMeta from 'vue-meta'
+
 
 import { BootstrapVue } from 'bootstrap-vue'
 
@@ -14,6 +16,8 @@ import { routes } from './routes.js'
 
 
 Vue.use(VueRouter)
+Vue.use(VueMeta)
+
 
 const router = new VueRouter({
   routes

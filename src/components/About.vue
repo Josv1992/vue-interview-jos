@@ -9,7 +9,13 @@
 
 <script>
 export default {
-  name: 'About'
+  name: 'About',
+  metaInfo: {
+  title: 'About',
+  meta: [
+    { vmid: 'description', name: 'description', content: 'About page' }
+  ]
+},
 }
 
 </script>
