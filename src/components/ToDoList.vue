@@ -28,8 +28,8 @@ export default {
 
 <style lang="sass">
 .item-list
-  border-top: 1px solid #ccc
-  border-bottom: 1px solid #ccc
+  border: 1px solid #ccc
+  margin-top: 2rem
 
 .item
 	&:nth-child(even) 
@@ -40,7 +40,7 @@ export default {
   .item-list
     max-width: 700px
     margin: 0 auto
-    margin-top: 5rem
+    margin-top: 2rem
     border: 1px solid black
 
 </style>

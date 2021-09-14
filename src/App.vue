@@ -54,5 +54,8 @@ html, body
   position: relative
   min-height: 100vh
 
+.content-wrap
+  padding-top: 2rem
+
 
 </style>

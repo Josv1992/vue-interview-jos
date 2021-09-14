@@ -2,7 +2,8 @@
   <div class="about">
     <h1>About</h1>
 
-    <router-link to="/aboutme">About Me 1</router-link>
+    <router-link to="/aboutme" class="link">About Me</router-link>
+
   </div>
 </template>
 
@@ -14,5 +15,7 @@ export default {
 </script>
 
 <style lang="sass">
+.link
+  color: blue
 
 </style>
