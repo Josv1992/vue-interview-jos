@@ -1,7 +1,7 @@
 export const routes = [
-  { path: '/', redirect: '/ToDoList' },
+  { path: '/', redirect: '/todo/ToDoList' },
   { 
-    path: '/ToDoList', 
+    path: '/todo/ToDoList', 
     component: () => import(/* webpackChunkName: "home" */ './components/ToDoList.vue'),
     name: 'ToDoList',
     meta: {

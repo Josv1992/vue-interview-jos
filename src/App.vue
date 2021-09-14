@@ -22,6 +22,11 @@ export default {
     Menu,
     Footer,
   },
+  // watch: {
+  //   $route(to, _from) {
+  //     document.title = to.meta.title || "ToDoList";
+  //   },
+  // },
 
   data() {
     const jsonld = {
