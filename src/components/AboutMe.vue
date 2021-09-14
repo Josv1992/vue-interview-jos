@@ -7,13 +7,14 @@
 
 <script>
 export default {
-  name: 'About Me',
+  name: 'AboutMe',
   metaInfo: {
-  title: 'About Me',
-  meta: [
-    { vmid: 'description', name: 'description', content: 'About Me page' }
-  ]
-},
+    title: 'About Me',
+    meta: [
+      { vmid: 'description', name: 'description', content: 'About Me page' },
+      {name: 'googlebot', content: 'noindex'}
+    ]
+  },
 }
 
 </script>

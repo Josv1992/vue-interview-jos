@@ -21,10 +21,10 @@ export default {
   },
   metaInfo: {
   title: 'To Do List',
-  meta: [
-    { vmid: 'description', name: 'description', content: 'To "Do List' }
-  ]
-},
+    meta: [
+      { vmid: 'description', name: 'description', content: 'To "Do List' }
+    ]
+  },
 
   computed: {
     ...mapGetters(["taskItems"]),

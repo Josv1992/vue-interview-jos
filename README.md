@@ -12,6 +12,13 @@ npm install
 npm run serve
 ```
 
+## View Website
+```
+npm run build
+npm i -g serve
+serve -s dist
+```
+
 # Requirements
 ## Internship
 - Only screen resolution what will be tested is 360x640. (mobile)
@@ -102,3 +109,8 @@ Deliveries:
 
 **Extra mile**
 - Make a proposition about how to automatically test the google page speed of the project.
+
+Answer:
+Using the Google PageSpeed Insights API, web page performance could possibly be measured automatically when the page is being built:
+https://developers.google.com/speed/docs/insights/v5/get-started
+

@@ -4,8 +4,9 @@ const { routes } = require('./src/routes.js');
 module.exports = {
   pluginOptions: {
     sitemap: {
-      baseURL: 'https://example.com',
+      baseURL: 'https://josvermeulen.nl',
       routes,
+      pretty: true
   }
   },
   configureWebpack: {

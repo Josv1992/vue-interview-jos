@@ -1,5 +1,6 @@
 <template>
   <div id="app" >
+    <script v-html="jsonld" type="application/ld+json"></script>
       <Menu></Menu>
     <main class="content-wrap">
       <router-view></router-view>
@@ -23,7 +24,23 @@ export default {
   },
 
   data() {
+    const jsonld = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Placeholder",
+        "item": "https://example.com/placeholder"
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "The Lord of the Rings",
+        "item": "https://example.com/placeholder/2"
+      }]
+    }
     return {
+      jsonld,
       taskItem: {
         val: "",
         key: 0

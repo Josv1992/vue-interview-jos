@@ -14,7 +14,8 @@ export const routes = [
       ]
     }
   },
-  { path: '/contact',
+  { 
+    path: '/contact',
     component: () => import(/* webpackChunkName: "contact" */ './components/Contact.vue'),
     name: 'Contact', meta: {
     title: 'Contact',
@@ -28,18 +29,26 @@ export const routes = [
       ]
     }
   } },
-  { path: '/legal',
+  { 
+    path: '/legal',
     component: () => import(/* webpackChunkName: "legal" */ './components/Legal.vue'),
     name: 'Legal', meta: {
     title: 'Legal Info'
   } },
-  { path: '/about',
+  { 
+    path: '/about',
     component: () => import(/* webpackChunkName: "about" */ './components/About.vue'),
     name: 'About',
     meta: {
        title: 'About'
   } },
-    { path: '/aboutme',
+    {
+      path: '/aboutme',
       component: () => import(/* webpackChunkName: "aboutme" */ './components/AboutMe.vue'),
+      meta: {
+        sitemap: {
+          ignoreRoute: true
+        }
+      }
     }
 ]

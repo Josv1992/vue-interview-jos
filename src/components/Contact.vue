@@ -1,11 +1,12 @@
 <template>
   <div class="contact">
     <h1>Contact</h1>
+    <span>Here's a photo of my dog, feel free to contact her:</span>
     <div v-if="!isMobile">
-     <b-img class="image-contact" :src="require('@/assets/photos/Dog_Large.webp')" alt="Photo of a cute dog" ></b-img>
+     <b-img class="image-contact" :src="require('@/assets/photos/Dog_Large.webp')" width="712" height="712" alt="Photo of a cute dog" ></b-img>
     </div>
     <div v-else>
-      <b-img class="image-contact" :src="require('@/assets/photos/Dog_Mobile.webp')" alt="Photo of a cute dog" ></b-img>
+      <b-img class="image-contact" :src="require('@/assets/photos/Dog_Mobile.webp')" width="400" height="400" alt="Photo of a cute dog" ></b-img>
     </div>
   </div>
 </template>
