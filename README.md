@@ -114,3 +114,13 @@ Answer:
 Using the Google PageSpeed Insights API, web page performance could possibly be measured automatically when the page is being built:
 https://developers.google.com/speed/docs/insights/v5/get-started
 
+Using Jenkins, when the page is being built, the following command can be run:
+
+curl https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=yourURL&key=yourAPIKey
+
+I would suggest saving this JSON object in an S3 bucket, and use it to compare it with previously saved JSON output. 
+With that you could build a visualisation (with line graphs for example), to visualize the increase or decrease of page performance compared to previous builds. You can have a separate report for each individual page.
+
+This report can be made with javascript, using Google Data Studio API, resulting in a ‘report viewer page’, or directly with Google Data Studio.
+
+In short, this way the reports will be automatically made, and those reports can be visualized to see improvements in performance.
